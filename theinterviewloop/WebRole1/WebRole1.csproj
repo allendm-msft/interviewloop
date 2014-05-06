@@ -225,6 +225,8 @@
     <Compile Include="Controllers\basic\CandidatesController.cs" />
     <Compile Include="Controllers\basic\CompaniesController.cs" />
     <Compile Include="Controllers\basic\InterviewersController.cs" />
+    <Compile Include="Controllers\basic\InterviewLoopsController.cs" />
+    <Compile Include="Controllers\basic\InterviewsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -233,15 +235,13 @@
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\basic\Candidate.cs" />
-    <Compile Include="Models\basic\CandidateContext.cs" />
+    <Compile Include="Models\basic\InterviewLoopContext.cs" />
     <Compile Include="Models\basic\Company.cs" />
-    <Compile Include="Models\basic\CompanyContext.cs" />
     <Compile Include="Models\basic\Interview.cs" />
     <Compile Include="Models\basic\Interviewer.cs" />
     <Compile Include="Models\basic\InterviewLoop.cs" />
     <Compile Include="Models\basic\QuestionAnswer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\InterviewerContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />

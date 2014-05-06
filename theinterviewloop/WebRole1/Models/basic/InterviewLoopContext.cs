@@ -6,7 +6,7 @@ using System.Web;
 
 namespace WebRole1.Models
 {
-    public class InterviewerContext : DbContext
+    public class InterviewLoopContext : DbContext
     {
         // You can add custom code to this file. Changes will not be overwritten.
         // 
@@ -15,13 +15,17 @@ namespace WebRole1.Models
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
-        public InterviewerContext() : base("name=InterviewerContext")
+        public InterviewLoopContext() : base("name=InterviewLoopContext")
         {
         }
 
+        public System.Data.Entity.DbSet<WebRole1.Models.Candidate> Candidates { get; set; }
+        public System.Data.Entity.DbSet<WebRole1.Models.Company> Companies { get; set; }
         public System.Data.Entity.DbSet<WebRole1.Models.Interviewer> Interviewers { get; set; }
 
-        public System.Data.Entity.DbSet<WebRole1.Models.Company> Companies { get; set; }
+        public System.Data.Entity.DbSet<WebRole1.Models.InterviewLoop> InterviewLoops { get; set; }
+
+        public System.Data.Entity.DbSet<WebRole1.Models.Interview> Interviews { get; set; }
     
     }
 }

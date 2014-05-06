@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
@@ -15,7 +11,7 @@ namespace WebRole1.Controllers
 {
     public class CandidatesController : ApiController
     {
-        private CandidateContext db = new CandidateContext();
+        private readonly InterviewLoopContext db = new InterviewLoopContext();
 
         // GET: api/Candidates
         public IQueryable<Candidate> GetCandidates()
