@@ -6,7 +6,7 @@ namespace WebRole1.Models
     /// <summary>
     /// A round of interviews for a "single" candidate
     /// </summary>
-    [Table("Interview")]
+    [Table("InterviewLoop")]
     public class InterviewLoop
     {
         [Key]

@@ -11,7 +11,13 @@ namespace WebRole1.Controllers
 {
     public class CompaniesController : ApiController
     {
-        private readonly InterviewLoopContext db = new InterviewLoopContext();
+        private InterviewLoopContext db = new InterviewLoopContext();
+
+        public CompaniesController()
+        {
+            //db.Companies.Add(new Company { Name = "companyname1" });
+            //db.Companies.Add(new Company { Name = "companyname2" });
+        }
 
         // GET: api/Companies
         public IQueryable<Company> GetCompanies()
