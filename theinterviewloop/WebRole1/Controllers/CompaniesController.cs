@@ -15,8 +15,6 @@ namespace WebRole1.Controllers
 
         public CompaniesController()
         {
-            //db.Companies.Add(new Company { Name = "companyname1" });
-            //db.Companies.Add(new Company { Name = "companyname2" });
         }
 
         // GET: api/Companies

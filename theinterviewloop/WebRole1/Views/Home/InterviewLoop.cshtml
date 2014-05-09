@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "Interview Loop";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h2>Candidate Profile</h2>
+    <button class="btn-default">Save</button>
+    <button class="btn-default">Email All (except candidate)</button>
+    <div class="row">
+        <div class="col-md-4 table-bordered"></div>
+        <div class="col-md-8">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="inputCandidateName" class="col-sm-2 control-label">Name</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="inputCandidateName" placeholder="Name" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress" class="col-sm-2 control-label">Address</label>
+                    <div class="col-sm-8">
+                        <textarea class="form-control" rows="3" id="inputPhoneNumber" ></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPhoneNumber" class="col-sm-2 control-label">Contact</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="inputPhoneNumber" placeholder="Contact" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-8">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Email" />
+                    </div>
+                </div>
+            </form>        
+        </div>
+    </div>
+    <br />
+   
+
+    <div class="row">
+        <h4 class="col-md-4">HR Coordinators</h4>
+        <button class="btn-primary">Add</button>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>+/-</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>-</td>
+                <td>Allen Mathias</td>
+                <td>allendm@mirosoft.com</td>
+                <td>0402148324</td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+
+    <div class="row">
+        <h4 class="col-md-4">Interviewers</h4>
+        <button class="btn-primary">Add</button>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>+/-</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <br />
+
+</div>
+
+@section scripts {
+    @Scripts.Render("~/bundles/company")
+}

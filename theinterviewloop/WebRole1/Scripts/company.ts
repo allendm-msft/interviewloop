@@ -33,6 +33,14 @@ module Company {
                 $("#add_company").addClass("disabled");
             });
             $("#interviewers").removeClass("hidden");
+
+            $("#empDetailsModal").on("hidden.bs.modal", function () {
+                $("#interviewersTableBody tr:last").a .append("tr").append("td").text("+/-");
+            });
+
+            //$("#empDetailsModal").on("show.bs.modal", function () {
+            //    this.model.name = "nothing";
+            //});
         }
     }
 }

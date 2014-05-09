@@ -16,6 +16,11 @@ namespace WebRole1.Controllers
             return View();
         }
 
+        public ActionResult InterviewLoop()
+        {
+            return View();
+        }
+
         public ActionResult Company()
         {
             return View();

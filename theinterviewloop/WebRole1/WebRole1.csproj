@@ -234,6 +234,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201405080638163_InitialCreate.cs" />
+    <Compile Include="Migrations\201405080638163_InitialCreate.Designer.cs">
+      <DependentUpon>201405080638163_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\basic\Candidate.cs" />
@@ -311,6 +316,7 @@
     <Content Include="Views\Home\Company.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\InterviewLoop.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -328,6 +334,11 @@
     <TypeScriptCompile Include="Scripts\interviewer.ts" />
     <TypeScriptCompile Include="Scripts\models.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201405080638163_InitialCreate.resx">
+      <DependentUpon>201405080638163_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
