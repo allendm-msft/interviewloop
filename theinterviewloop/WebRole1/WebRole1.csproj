@@ -262,6 +262,8 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\companyoutline.png" />
+    <Content Include="Images\personoutline.jpg" />
     <Content Include="Scripts\infra\bootstrap.js" />
     <Content Include="Scripts\infra\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />

@@ -35,7 +35,7 @@ module Company {
             $("#interviewers").removeClass("hidden");
 
             $("#empDetailsModal").on("hidden.bs.modal", function () {
-                $("#interviewersTableBody tr:last").append("tr").append("td").text("+/-");
+                $("#interviewersTableBody tr:last").after("<tr><td>" + $("#inputIFName") + "</td><tr>");
             });
 
             //$("#empDetailsModal").on("show.bs.modal", function () {
