@@ -69,6 +69,7 @@
 //};
 
 /// <reference path=".\typings\jquery\jquery.d.ts" />
+/// <reference path=".\typings\bootstrap\bootstrap.d.ts" />
 
 // model
 // single q&a
@@ -180,8 +181,7 @@ class InterviewView {
     constructor() {
         this.model = new Interview();
 
-        this.$tablist = $("#tabbable");
-        this.$tablist.tabs();
+        this.$tablist = $("#myTabList");
 
         this.enableClickHandlersForButtons();
     }
@@ -206,23 +206,24 @@ class InterviewView {
 
         this.addQuestionTab(qnaCount);
         this.addQuestionAnswerDiv(qnaCount);
-
-        this.$tablist.tabs("option", "active", qnaCount);
     }
 
     // the tabs
     private addQuestionTab(count: number): void {
-        $("#myTabList li:first").clone(true).appendTo("#myTabList").removeClass("active");
+        $("#myTabList li.active").removeClass("active");
+        $("#myTabList li:first").clone(true).removeAttr("id").appendTo("#myTabList");
         $("#myTabList li:last a:first").attr("href", "#tab" + count).text("Question " + ++count);
-        this.$tablist.tabs("refresh");
+        $("#myTabList li:last").addClass("active");
     }
 
     // content per tab
     private addQuestionAnswerDiv(count: number) {
-        $("#myTabContent div:first").clone(true).appendTo("#myTabContent").removeClass("active");
+        $("#myTabContent div.active").removeClass("active");
+        $("#myTabContent div:first").clone(false).removeAttr("id").appendTo("#myTabContent");
         $("#myTabContent div:last").attr("id", "tab" + count);
         //$("#myTabContent div:last textarea:first").attr("id", "question-" + count).val(null);
         //$("#myTabContent div:last textarea:last").attr("id", "answer-" + count).val(null);
+        $("#myTabContent div:last").addClass("active");
     }
 
     public submitFeedback(event: MouseEvent) {

@@ -335,6 +335,7 @@
     <TypeScriptCompile Include="Scripts\interview.ts" />
     <TypeScriptCompile Include="Scripts\interviewer.ts" />
     <TypeScriptCompile Include="Scripts\models.ts" />
+    <TypeScriptCompile Include="Scripts\typings\bootstrap\bootstrap.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
   </ItemGroup>
   <ItemGroup>
