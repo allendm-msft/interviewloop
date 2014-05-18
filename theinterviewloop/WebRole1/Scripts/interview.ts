@@ -211,7 +211,7 @@ class InterviewView {
     // the tabs
     private addQuestionTab(count: number): void {
         $("#myTabList li.active").removeClass("active");
-        $("#myTabList li:first").clone(true).removeAttr("id").appendTo("#myTabList");
+        $("#myTabList li:first").clone(false).removeAttr("id").appendTo("#myTabList");
         $("#myTabList li:last a:first").attr("href", "#tab" + count).text("Question " + ++count);
         $("#myTabList li:last").addClass("active");
     }
@@ -221,8 +221,6 @@ class InterviewView {
         $("#myTabContent div.active").removeClass("active");
         $("#myTabContent div:first").clone(false).removeAttr("id").appendTo("#myTabContent");
         $("#myTabContent div:last").attr("id", "tab" + count);
-        //$("#myTabContent div:last textarea:first").attr("id", "question-" + count).val(null);
-        //$("#myTabContent div:last textarea:last").attr("id", "answer-" + count).val(null);
         $("#myTabContent div:last").addClass("active");
     }
 
